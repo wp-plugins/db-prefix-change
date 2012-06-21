@@ -1,4 +1,4 @@
-=== DB Prefix Change ===
+=== Change DB Prefix ===
 Contributors: Bhumi shah
 Donate link: http://creativedev.in
 Tags: Prefix,database prefix,wp_
