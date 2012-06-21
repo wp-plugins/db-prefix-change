@@ -3,7 +3,7 @@
 Plugin Name: Change Database Prefix
 Plugin URI: http://creativedev.in
 Description: a plugin to change database prefix
-Version: 1.2
+Version: 1.0
 Author: Ms. Bhumi Shah
 Author URI: http://creativedev.in
 */
