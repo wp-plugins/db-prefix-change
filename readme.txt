@@ -8,11 +8,11 @@ Stable tag: wp_
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This Plugin basically is for changing the database default prefix to other one. 
+This Plugin basically is for changing the database default prefix(wp_) to other one. 
 
 == Description ==
 
-This plugin is mainly useful if you have not changed the prefix at installation time and want to change aftrewards so its possible by this plugin.you don't need to change manually.
+This plugin is mainly useful if you have not changed the database default prefix(wp_) at installation time and want to change aftrewards so its possible by this plugin. With use of this plugin,you can easily replace your database default prefix or prefix to other keyword and you don't need to change manually.
 
 == Installation ==
 
