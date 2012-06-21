@@ -8,7 +8,7 @@ Stable tag: wp_
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This Plugin basically is for changing the database default prefix(wp_) to other one. 
+This Plugin is basically for changing the database default prefix(wp_) to other one. 
 
 == Description ==
 
