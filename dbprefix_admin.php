@@ -6,7 +6,22 @@
 
 		$dbprefix_new = $_POST['dbprefix_new'];
 		update_option('dbprefix_new', $dbprefix_new);
-		
+		$wpdb =& $GLOBALS['wpdb'];
+		$new_prefix = preg_replace("/[^0-9a-zA-Z_]/", "", $dbprefix_new);
+
+		if($dbprefix_new =='' || strlen($dbprefix_new) < 2 )
+			{
+               	  $bprefix_Message .= _e('Please provide a proper table prefix.');
+		}
+		else if ($new_prefix == $old_dbprefix) {
+			$bprefix_Message .= _e('No change! Please provide a new table prefix.');
+		}else if (strlen($new_prefix) < strlen($dbprefix_new)){
+
+			$bprefix_Message .= _e('You have used some characters disallowed for the table prefix. please user prefix instead of <b>'. $dbprefix_new .'</b>','information');
+
+		}
+		else
+		{
 		
 		$tables = dbprefix_getTablesToAlter();
 		
@@ -40,11 +55,15 @@
 			else {
 				$bprefix_Message .= _e('An error has occurred and the tables could not be updated!');
 			}
-		}// End if there are tables to rename
-		
+		// End if there are tables to rename
+		}
+		?><div class="updated"><p><strong><?php _e('Options saved.' ); ?></strong></p></div>
+		<?php 
+		}	
 		?>
-		<div class="updated"><p><strong><?php _e('Options saved.' ); ?></strong></p></div>
-		<?php
+		
+		
+		<?php 
 	} else {
 		//Normal page display
 		$dbhost = get_option('dbprefix_dbhost');
@@ -59,6 +78,7 @@
 ?>
 
 <div class="wrap">
+
 <?php    echo "<h2>" . __( 'Database Prefix change Display Options', 'oscimp_trdom' ) . "</h2>"; ?>
 
 <form name="dbprefix_form" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
@@ -69,7 +89,7 @@ global $wpdb;
 ?>
 <p><?php _e("Existing Prefix: " ); ?><input type="text" name="dbprefix_old_dbprefix" value="<?php echo $wpdb->prefix; ?>" size="20"><?php _e(" ex:wp_" ); ?></p>
 <p><?php _e("New Prefix: " ); ?><input type="text" name="dbprefix_new" value="" size="20"><?php _e(" ex: uniquekey_" ); ?></p>
-
+<p>Allowed characters: all latin alphanumeric as well as the <strong>_</strong> (underscore).</p>
 <p class="submit">
 <input type="submit" name="Submit" value="<?php _e('Update Options', 'dbprefix_trdom' ) ?>" />
 </p>
