@@ -1,0 +1,15 @@
+.lable01 {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+.ttl02 {
+	width: 150px;
+	float: left;
+}
+.container{
+   margin-top:20px;margin-bottom:10px;
+}
+.required,.error{color:#ff0000;}
+.success{ color:#0000FF;font-size:12px;}
