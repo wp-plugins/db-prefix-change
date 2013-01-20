@@ -1,6 +1,6 @@
 === Change DB Prefix ===
 Contributors: softy.5454
-Donate link: http://creativedev.in
+Donate link: http://creativedev.in/wordpress-plugins/
 Tags: Prefix,database prefix,wp_
 Requires at least: 3.0
 Tested up to: 3.5
@@ -28,8 +28,9 @@ An answer to that question.
 
 
 == Changelog ==
-
-
+Version 1.1
+1. Update layout of admin.
+2. Solved user table prefix change issue.
 
 == Upgrade notice ==
 
