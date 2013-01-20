@@ -1,10 +1,10 @@
 === Change DB Prefix ===
-Contributors: Bhumi shah
+Contributors: softy.5454
 Donate link: http://creativedev.in
 Tags: Prefix,database prefix,wp_
 Requires at least: 3.0
-Tested up to: 3.4
-Stable tag: wp_
+Tested up to: 3.5
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
