@@ -8,7 +8,7 @@
 	width: 150px;
 	float: left;
 }
-.container{
+.cdp-container{
    margin-top:20px;margin-bottom:10px;
 }
 .required,.error{color:#ff0000;}
@@ -19,7 +19,7 @@
 	margin: 0;
 	line-height: 1.4;
 }
-.postbox .inside, .stuffbox .inside {
+#cdp-wrap-div.postbox .inside, .stuffbox .inside {
 	padding: 0 12px 12px;
 	line-height: 1.4em;
 	font-size: 13px;

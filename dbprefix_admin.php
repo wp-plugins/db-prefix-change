@@ -66,7 +66,7 @@
 	
 ?>
 
-<div class="wrap">
+<div class="wrap" id="cdp-wrap-div">
   <?php    echo "<h2 class='hndle'>" . __( 'Change DB Prefix', 'oscimp_trdom' ) . "</h2>"; ?>
   <form name="dbprefix_form" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" onsubmit="return validateForm();" >
     <input type="hidden" name="dbprefix_hidden" value="Y">
@@ -92,7 +92,7 @@
         </strong></p>
     </div><!-- updated div -->
     <?php } ?>
-    <div class="container"><label for="dbprefix_old_dbprefix" class="lable01"> <span class="ttl02">
+    <div class="cdp-container"><label for="dbprefix_old_dbprefix" class="lable01"> <span class="ttl02">
     <?php _e("Existing Prefix: " ); 
 ?>
     <span class="required">*</span></span>
