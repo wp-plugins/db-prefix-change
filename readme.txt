@@ -26,7 +26,6 @@ This plugin is mainly useful if you have not changed the database default prefix
 
 An answer to that question.
 
-
 == Screenshots ==
 
 1. Settings in Admin panel 
