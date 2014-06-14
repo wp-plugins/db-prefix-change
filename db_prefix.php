@@ -11,6 +11,8 @@ Author URI: http://creativedev.in
 <?php 
 wp_register_style('dbStyle',plugins_url('css/style.css',__FILE__));
 wp_enqueue_style('dbStyle');
+wp_register_script('jquery.validate',plugins_url('js/jquery.validate.min.js',__FILE__),array('jquery'), false, false);
+wp_enqueue_script('jquery.validate');
 wp_register_script('util',plugins_url('js/util.js',__FILE__),array('jquery'), false, false);
 wp_enqueue_script('util');
 function dbprefix_wpConfigCheckPermissions($wpConfigFilePath)

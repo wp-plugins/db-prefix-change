@@ -1,6 +1,6 @@
 <?php 
-	global $wpdb;
-	if($_POST['dbprefix_hidden'] == 'Y' && isset($_POST['Submit']) && trim($_POST['Submit'])=='Save Changes') { 
+global $wpdb;
+	if(($_POST['dbprefix_hidden'] == 'Y' && isset($_POST['dbprefix_hidden'])) && (isset($_POST['Submit']) && trim($_POST['Submit'])=='Save Changes')) { 
 		//Form data sent
 		$old_dbprefix = $_POST['dbprefix_old_dbprefix'];
 		update_option('dbprefix_old_dbprefix', $old_dbprefix);
@@ -62,13 +62,11 @@
 		$dbprefix_exist = get_option('dbprefix_prefix_exist');
 		$dbprefix_new = get_option('dbprefix_new');
 	}
-	
-	
 ?>
-
+<!DOCTYPE html>
 <div class="wrap" id="cdp-wrap-div">
   <?php    echo "<h2 class='hndle'>" . __( 'Change DB Prefix', 'oscimp_trdom' ) . "</h2>"; ?>
-  <form name="dbprefix_form" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" onsubmit="return validateForm();" >
+  <form id="dbprefix_form" name="dbprefix_form" method="post" action="" >
     <input type="hidden" name="dbprefix_hidden" value="Y">
  <div id="cdtp" class="postbox">
   <h3 class="hndle" style="cursor: default;"><span>Database Prefix Settings</span></h3>
@@ -96,7 +94,7 @@
     <?php _e("Existing Prefix: " ); 
 ?>
     <span class="required">*</span></span>
-    <input type="text" name="dbprefix_old_dbprefix" id="dbprefix_old_dbprefix" value="<?php echo $wpdb->prefix;; ?>" size="20">
+    <input type="text" name="dbprefix_old_dbprefix" id="dbprefix_old_dbprefix" value="<?php echo $wpdb->prefix;; ?>" size="20" required>
     <?php _e(" ex:wp_" ); ?><span class="error"></span>
     </label>
     <label for="dbprefix_new" class="lable01"> <span class="ttl02">
