@@ -26,11 +26,20 @@ This plugin is mainly useful if you have not changed the database default prefix
 
 An answer to that question.
 
+== Screenshots ==
+
+1. Settings in Admin panel 
+2. Database changes
 
 == Changelog ==
+
 Version 1.1
 1. Update layout of admin.
 2. Solved user table prefix change issue.
+
+Version 1.2
+1. Resolved issues of previous version.
+2. Added Messages to provide information.
 
 == Upgrade notice ==
 
