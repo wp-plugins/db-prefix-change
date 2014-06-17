@@ -100,7 +100,7 @@ global $wpdb;
     <label for="dbprefix_new" class="lable01"> <span class="ttl02">
     <?php _e("New Prefix: " ); ?>
     <span class="required">*</span></span>
-    <input type="text" name="dbprefix_new" value="" size="20" id="dbprefix_new">
+    <input type="text" name="dbprefix_new" value="" size="20" id="dbprefix_new" required>
     <?php _e(" ex: uniquekey_" ); ?>
     </label>
     <p class="margin-top:10px"><b>Allowed characters:</b> all latin alphanumeric as well as the <strong>_</strong> (underscore).</p>
